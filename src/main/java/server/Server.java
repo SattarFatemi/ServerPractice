@@ -44,6 +44,8 @@ public class Server {
 
     private void addNewClientHandler(Socket socket) throws IOException {
 
+        System.out.println("Adding new client handler...");
+
         ClientHandler clientHandler = new ClientHandler(clientHandlers.size(), socket, orderHandler);
 
         if (serverStatus == ServerStatus.WAITING) {
